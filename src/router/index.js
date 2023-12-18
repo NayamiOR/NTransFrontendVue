@@ -15,6 +15,16 @@ const router = createRouter({
       name: "sendmessage",
       component: SendMessageVue,
     },
+    {
+      path: "/mountfile",
+      name: "mountfile",
+      component: () => import("../view/MountFile.vue"),
+    },
+    {
+      path: "/mountmessage",
+      name: "mountmessage",
+      component: () => import("../view/MountMessage.vue"),
+    },
   ],
 });
 

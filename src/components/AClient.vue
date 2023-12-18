@@ -8,11 +8,9 @@ const link = ref(target.link)
 watch(link, (newVal) => {
     target.setLink(newVal)
 })
-
 </script>
-
 <script>
-export const useTarget = defineStore('target', () => {
+export const useTarget = defineStore('Atarget', () => {
     const link = ref('localhost:18080')
     function setLink(newVal) {
         link.value = newVal
@@ -24,6 +22,7 @@ export const useTarget = defineStore('target', () => {
 })
 </script>
 
+
 <template>
     <div class="box">
         <h1>Public端（有公网ip）</h1>
@@ -33,13 +32,14 @@ export const useTarget = defineStore('target', () => {
             <span style="width: 20px;"></span>
             <input type="text" id="ATarget" v-model="link">
         </div>
-
         <div>
             <nav>
-                <RouterLink to="/sendfile">发送文件</RouterLink>
-                <RouterLink to="/sendmessage">发送消息</RouterLink>
+                <RouterLink to="/mountfile">挂载文件</RouterLink>
+                <RouterLink to="/mountmessage">挂载消息</RouterLink>
             </nav>
         </div>
+
+
     </div>
 </template>
 
