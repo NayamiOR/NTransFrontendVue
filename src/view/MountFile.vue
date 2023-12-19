@@ -20,7 +20,9 @@ function sendFile(e) {
         })
     // 清空input
     fileList.value = []
-
+    const input = document.querySelector('input[type=file]')
+    input.value = ''
+    alert('挂载成功')
 }
 
 function fileChange(e) {

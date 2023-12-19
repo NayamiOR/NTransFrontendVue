@@ -16,6 +16,8 @@ function submit(e) {
         .catch(err => {
             console.log(err)
         })
+    message.value = ''
+    alert('挂载成功')
 }
 </script>
 
